@@ -14,7 +14,7 @@ $T(n) = 2n + 5 → T(n) = O(n)$
 $T(n) = 3n^2 + 12n - 6 → T(n) = O(n^2)$
 
 ### python으로 기술한 코드의 수행시간
-• O(1) 시간 알고리즘(constant time algorithm) :  
+• O(`1`) 시간 알고리즘(constant time algorithm) :  
 값을 1 증가시킨 후 리턴
 
 ```python
@@ -22,7 +22,7 @@ def increment_one(a):
     return a+1
 ```
 
-• O(`log n`) 시간 알고리즘(logarithmic time algorithm); log의 밑은 2 :  
+• O($log n$) 시간 알고리즘(logarithmic time algorithm); log의 밑은 2 :  
 십진수 `n`을 이진수로 표현할 때 필요한 비트 개수 계산 알고리즘
 
 ```python
@@ -30,14 +30,14 @@ def number_of_bits(n):
     count = 0 
     while n > 0: 
         n = n // 2
-    count += 1 
+        count += 1 
     return count
 ```
 
 • O(`n`) 시간 알고리즘(linear time algorithm) :  
 n개의 수 중에서 최대값을 찾는 알고리즘  
 
-• O(`n^2`) 시간 알고리즘(quadratic time algorithm) :  
+• O($n^2$) 시간 알고리즘(quadratic time algorithm) :  
 두 배열 A, B의 모든 정수쌍의 곱의 합을 계산하는 알고리즘
 
 ```python
@@ -49,7 +49,7 @@ def algorithm array_sum(A, B, n)
     return sum
 ```
 
-• O(`2^n`) 이상의 시간이 필요한 알고리즘(exponential time algorithm) :  
+• O($2^n$) 이상의 시간이 필요한 알고리즘(exponential time algorithm) :  
 피보나치수 k를 계산하는 재귀 알고리즘
 
 ```python
