@@ -9,11 +9,13 @@
 
 ## Big-Oh 표기법
 • 정확한 횟수보다는 입력의 크기 `n`이 커질때, 수행시간의 증가하는 정도(rate of the growth of T(n) as n goes big)가 훨씬 중요하다.  
+  
+
 • 최고차항(가장 빨리 증가하는 항)만을 남기고 나머지는 생략하는 식으로 수행시간을 간략히 표기하는 방법을 점근표기법(asymptotic notation)이라고 부르고, Big-O(대문자 O)를 이용하여 다음의 예처럼 표기한다.  
 $T(n) = 2n + 5 → T(n) = O(n)$  
 $T(n) = 3n^2 + 12n - 6 → T(n) = O(n^2)$
 
-### python으로 기술한 코드의 수행시간
+## python으로 기술한 코드의 수행시간
 • O(`1`) 시간 알고리즘(constant time algorithm) :  
 값을 1 증가시킨 후 리턴
 
@@ -34,7 +36,7 @@ def number_of_bits(n):
     return count
 ```
 
-• O(`n`) 시간 알고리즘(linear time algorithm) :  
+• O($n$) 시간 알고리즘(linear time algorithm) :  
 n개의 수 중에서 최대값을 찾는 알고리즘  
 
 • O($n^2$) 시간 알고리즘(quadratic time algorithm) :  
