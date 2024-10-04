@@ -1,3 +1,11 @@
 # n개의 정수 중 최대값
-if 문의 결과에 따라 currentMax = A[i]의 실행 여부가 결정  
-최악의 입력에 대한 횟수 분석: T(n) = 2n –1
+주어진 배열 `A`에서 `n`개의 정수 중 최대값을 찾습니다.
+
+## 문제 풀이 설명
+다음 코드는 `if` 문을 사용하여 배열의 각 요소와 현재까지의 최대값을 비교합니다. 
+
+```python
+currentMax = A[0]
+for i in range(1, n):
+    if currentMax < A[i]:
+        currentMax = A[i]
