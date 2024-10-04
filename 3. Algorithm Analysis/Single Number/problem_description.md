@@ -9,10 +9,10 @@
 ```python
 A = set()
 for i in nums:
-if i in A:
-    A.remove(i)
-else:
-    A.add(i)
+    if i in A:
+        A.remove(i)
+    else:
+        A.add(i)
 ```
 
 ## 알고리즘의 시간복잡도
