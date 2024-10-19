@@ -1,0 +1,11 @@
+## Two pointers technique
+# : 주로 정렬된 배열을 대상으로 함
+
+# Opposite directional : 양 끝에서 출발
+# 문제 : 125, 167, 283, 344, 27
+
+# Equi-directional : slow-runner and fast-runner
+# 문제 : 234, 141, 3, 26
+
+# Sliding window : 고정 사이즈의 윈도우가 이동
+# 문제 : 209, 239, 76, 424
