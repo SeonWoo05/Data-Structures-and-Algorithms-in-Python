@@ -1,3 +1,5 @@
+# Leetcode 543
+
 def diameter_of_binary_tree(arr):
     def dfs(index):
         # 1. 배열 범위를 벗어나거나 값이 -1인 경우(노드가 없는 경우)
@@ -9,10 +11,10 @@ def diameter_of_binary_tree(arr):
         right_height = dfs(2 * index + 2)  # 오른쪽 자식
 
         # 3. 지름 계산: 현재 노드를 루트로 하는 경로의 길이
-        diameter[0] = max(diameter[0], left_height + right_height)  # 최대 지름 갱신
+        diameter[0] = max(diameter[0], left_height + right_height)  # 최대 지름 갱신 / 지름은 왼쪽 높이 + 오른쪽 높이의 최대값
 
         # 4. 현재 노드의 높이를 반환
-        return max(left_height, right_height) + 1
+        return max(left_height, right_height) + 1 # 높이는 자식의 높이의 최대값 + 1
 
     # 결과를 저장할 리스트
     diameter = [0]  # 리스트로 지름 저장
@@ -22,3 +24,5 @@ def diameter_of_binary_tree(arr):
 # 입력 처리
 arr = list(map(int, input().split()))  # 배열로 표현된 트리
 print(diameter_of_binary_tree(arr))
+
+# 지름은 "간선(edge)"의 개수를 기준

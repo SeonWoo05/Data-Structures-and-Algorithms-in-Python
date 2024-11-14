@@ -1,6 +1,6 @@
 # BJ 9934
 
-# 중위순회로 읽은 노드들을 주면 레벨 나눠서 단계별로 출력하기
+# 중위순회로 읽은 노드들을 레벨 나눠서 단계별로 출력하기
 def tree_by_level(K,values):
     def build_tree(level,start,end):
         if level >= K or start > end:

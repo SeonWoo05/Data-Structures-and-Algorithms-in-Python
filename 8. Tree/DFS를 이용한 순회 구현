@@ -1,0 +1,49 @@
+def to_pre_tree(arr):
+    def dfs(index):
+        if index >= len(arr):
+            return []
+        
+        crnt = [arr[index]]
+        left = dfs(2 * index + 1)
+        right = dfs(2 * index + 2)
+        
+        return crnt + left + right
+    
+    return dfs(0)
+
+arr = list(map(int, input().split()))
+print(to_pre_tree(arr))
+
+
+def to_in_tree(arr):
+    def dfs(index):
+        if index >= len(arr):
+            return []
+
+        left = dfs(2 * index + 1)
+        crnt = [arr[index]]
+        right = dfs(2 * index + 2)
+        
+        return left + crnt + right
+    
+    return dfs(0)
+
+arr = list(map(int, input().split()))
+print(to_in_tree(arr))
+
+
+def to_post_tree(arr):
+    def dfs(index):
+        if index >= len(arr):
+            return []
+        
+        left = dfs(2 * index + 1)
+        right = dfs(2 * index + 2)
+        crnt = [arr[index]]
+        
+        return left + right + crnt
+    
+    return dfs(0)
+
+arr = list(map(int, input().split()))
+print(to_post_tree(arr))
