@@ -4,11 +4,7 @@ import heapq
 
 class Solution(object):
     def findKthLargest(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: int
-        """
+        
         # nums의 처음 k개의 원소로 최소 힙 생성
         heap = nums[:k]
         heapq.heapify(heap)
